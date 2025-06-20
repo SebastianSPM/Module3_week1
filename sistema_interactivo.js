@@ -1,28 +1,26 @@
 
 //created variables
-let edad, nombre, mensaje, result, number_1, number_2;
+let age_user, name_usuario, message_user;
 
 //array with message
-mensaje = ["¡Sigue aprendiendo y disfrutando del código!", "¡Prepárate para grandes oportunidades en el mundo de la programación!", "Error, Por favor, ingresa una edad válida en números.", "Esa edad no existe.", "Tienes una edad bastante avanzada, pero sigue aprendiendo."]
+menssage_usuario = ["¡Sigue aprendiendo y disfrutando del código!", "¡Prepárate para grandes oportunidades en el mundo de la programación!", "Error, Por favor, ingresa una edad válida en números.", "Esa edad no existe.", "Tienes una edad bastante avanzada, pero sigue aprendiendo."]
 
-alert("✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️\n✖️✖️✖️✖️ SISTEMA DE MENSAJE ✖️✖️✖️✖️\n✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️")
+alert("**************************************\n **** SISTEMA DE MENSAJE **** \n **************************************")
 
 //created variable
-nombre = prompt("\nEnter from keyboard your name: ")
-edad = prompt("\nEnter from keyboard your age: ")
-number_1 = parseInt(prompt("\nEnter from keyboard your number one:"))
-number_2 = parseInt(prompt("\nEnter from keyboard your number two:"))
-result = number_1 + number_2
+name_usuario = prompt("\nEnter from keyboard your name: ");
+age_user = prompt("\nEnter from keyboard your age: ");
 
-if(isNaN(edad)){
-    console.error(mensaje[2])
-}else if(edad >= 18 && edad < 110){
-    alert(`\nHola ${nombre}, eres mayor de edad ✅ ` + mensaje[1])
-    if(edad >= 80 && edad < 110){
-        alert(`\nHola ${nombre}, ${mensaje[4]}`)
+//Condition of the age
+if(isNaN(age_user)){
+    console.error(message_user[2]);
+}else if(age_user >= 18 && age_user < 110){
+    alert(`\nHola ${name_usuario}, eres mayor de edad ✅ ` + message_user[1]);
+    if(age_user >= 80 && age_user < 110){
+        alert(`\nHola ${name_usuario}, ${message_user[4]}`);
     }
-}else if(edad < 18 && edad > 0){
-    alert(`\nHola ${nombre}, eres menor de edad ${mensaje[0]} 😔`)
+}else if(age_user < 18 && age_user > 0){
+    alert(`\nHola ${name_usuario}, eres menor de edad ${message_user[0]} 😔`);
 }else{
-    alert(`\nHola ${nombre}, ${mensaje[3]} ❌`)
+    alert(`\nHola ${name_usuario}, ${message_user[3]} ❌`);
 }
